@@ -1,0 +1,97 @@
+:root {
+    /* Primary Colors */
+    --water-blue: #0E87CC;
+    --water-light: #F0F9FF;
+}
+
+/* Gradient Classes */
+.gradient-primary {
+    background: linear-gradient(135deg, var(--water-blue) 0%, #4AA3E5 50%, var(--water-light) 100%);
+}
+
+.gradient-secondary {
+    background: linear-gradient(135deg, var(--water-light) 0%, #4AA3E5 50%, var(--water-blue) 100%);
+}
+
+.gradient-vertical {
+    background: linear-gradient(180deg, var(--water-blue) 0%, #4AA3E5 50%, var(--water-light) 100%);
+}
+
+.gradient-vertical-reverse {
+    background: linear-gradient(180deg, var(--water-light) 0%, #4AA3E5 50%, var(--water-blue) 100%);
+}
+
+/* Text Colors */
+.text-water-dark {
+    color: var(--water-blue);
+}
+
+.text-water-medium {
+    color: #4AA3E5;
+}
+
+/* Background Colors */
+.bg-water-dark {
+    background-color: var(--water-blue);
+}
+
+.bg-water-medium {
+    background-color: #4AA3E5;
+}
+
+.bg-water-light {
+    background-color: var(--water-light);
+}
+
+/* Hover States */
+.hover\:text-water-dark:hover {
+    color: var(--water-blue);
+}
+
+/* Transitions */
+.transition-gradient {
+    transition: background 0.3s ease-in-out;
+}
+
+/* Card Styles */
+.card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: var(--water-dark);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: var(--water-medium);
+}
+
+.btn-secondary {
+    background-color: white;
+    color: var(--water-dark);
+    border: 1px solid var(--water-medium);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-secondary:hover {
+    background-color: var(--water-light);
+    border-color: var(--water-dark);
+} 
