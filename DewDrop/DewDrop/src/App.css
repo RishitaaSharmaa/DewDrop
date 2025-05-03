@@ -1,0 +1,60 @@
+/* App-specific styles */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 1rem;
+}
+
+/* Water-themed animations */
+.water-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.water-ripple::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(32, 178, 170, 0.1);
+  border-radius: 40%;
+  transform: translate(-50%, -50%);
+  animation: ripple 8s linear infinite;
+}
+
+@keyframes ripple {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Water drop effect */
+.water-drop {
+  position: relative;
+  display: inline-block;
+}
+
+.water-drop::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: rgba(32, 178, 170, 0.2);
+  transition: height 0.5s ease;
+}
+
+.water-drop:hover::after {
+  height: 100%;
+} 
